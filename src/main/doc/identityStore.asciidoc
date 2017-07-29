@@ -386,6 +386,8 @@ It MUST be possible for the definition of an _IdentityStore_ to exist within the
 
 As described above, in the "<<Declaring Capabilities>>" section, the _IdentityStore_ interface includes two methods, _validationTypes()_ and _priority()_, that enable an _IdentityStore_ to declare its capabilities. Those capabilities may be intrinsic -- determined by the __IdentityStore__'s implementation -- or they may be determined by the __IdentityStore__'s configuration.
 
+The container MUST eagerly instantiate __IdentityStore__s and fail the deployment in case of error.
+
 === Annotations and Built-In IdentityStore Beans
 
 A Java EE container MUST support built-in beans for the following _IdentityStore_ types, to be configured and made available via corresponding annotations:
